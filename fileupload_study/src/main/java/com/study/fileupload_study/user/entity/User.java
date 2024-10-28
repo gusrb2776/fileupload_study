@@ -18,5 +18,5 @@ public class User {
 
     @Id @GeneratedValue
     @Column(name = "user_seq")
-    private int id;
+    private int seq;
 }

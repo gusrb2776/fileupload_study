@@ -1,12 +1,14 @@
-package com.study.fileupload_study.board.entity;
+package com.study.fileupload_study.sound.enitity;
 
+import com.study.fileupload_study.workspace.Workspace;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -15,17 +17,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "Sources")
-public class Source {
+public class Sound {
 
     @Id @GeneratedValue
-    @Column(name = "source_seq")
+    @Column(name = "sound_seq")
     private Long seq;
 
-    @Column(nullable = false)
-    private String name;
-
     @ManyToOne
-    @JoinColumn(name = "board_seq", nullable = false)
-    private Board board;
+    @JoinColumn(name = "workspace_seq")
+    private Workspace workspace;
+
+    private Integer startPoint;
+
+    private Integer endPoint;
+
+    @Enumerated(EnumType.STRING)
+    private SoundType type;
 }

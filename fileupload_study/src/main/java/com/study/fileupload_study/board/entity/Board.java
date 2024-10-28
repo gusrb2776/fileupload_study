@@ -11,9 +11,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.sql.Blob;
@@ -27,13 +27,14 @@ public class Board {
 
     @Id @GeneratedValue
     @Column(name = "board_seq")
-    private Long id;
+    private Long seq;
 
     @ManyToOne
     @JoinColumn(name = "user_seq", nullable = false)
     private User user;
 
     @Column(nullable = false)
+    @Size(min = 1, max = 255)
     private String title;
 
     @Enumerated(EnumType.STRING)

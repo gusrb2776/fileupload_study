@@ -5,8 +5,6 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MapsId;
@@ -31,12 +29,12 @@ public class Like {
     @Column(name = "like_seq")
     private PK pk;
 
-    @MapsId(value = "board_seq")
+    @MapsId(value = "boardSeq")
     @ManyToOne
     @JoinColumn(name = "board_seq", nullable = false)
     private Board board;
 
-    @MapsId(value = "user_seq")
+    @MapsId(value = "userSeq")
     @ManyToOne
     @JoinColumn(name = "user_seq", nullable = false)
     private User user;
@@ -50,7 +48,7 @@ public class Like {
         @Column(name = "board_seq")
         private Long boardSeq;
 
-        @Column(name = "category_seq")
+        @Column(name = "user_seq")
         private Long userSeq;
     }
 }
