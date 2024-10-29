@@ -1,6 +1,7 @@
 package com.study.fileupload_study.board.entity;
 
-import com.study.fileupload_study.user.entity.User;
+import com.study.fileupload_study.artist.Artist;
+import com.study.fileupload_study.artist.user.entity.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -22,7 +23,7 @@ import java.sql.Blob;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "Boards")
+@Table(name = "boards")
 public class Board {
 
     @Id @GeneratedValue
@@ -30,8 +31,8 @@ public class Board {
     private Long seq;
 
     @ManyToOne
-    @JoinColumn(name = "user_seq", nullable = false)
-    private User user;
+    @JoinColumn(name = "artist_seq", nullable = false)
+    private Artist artist;
 
     @Column(nullable = false)
     @Size(min = 1, max = 255)

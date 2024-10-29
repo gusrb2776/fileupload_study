@@ -1,6 +1,5 @@
-package com.study.fileupload_study.sound.enitity;
+package com.study.fileupload_study.workspace.entity;
 
-import com.study.fileupload_study.workspace.Workspace;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

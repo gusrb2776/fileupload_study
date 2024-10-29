@@ -1,4 +1,4 @@
-package com.study.fileupload_study.workspace;
+package com.study.fileupload_study.workspace.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

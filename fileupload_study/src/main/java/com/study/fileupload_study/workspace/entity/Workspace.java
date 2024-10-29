@@ -1,4 +1,4 @@
-package com.study.fileupload_study.workspace;
+package com.study.fileupload_study.workspace.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,6 +1,6 @@
 package com.study.fileupload_study.board.entity;
 
-import com.study.fileupload_study.user.entity.User;
+import com.study.fileupload_study.artist.user.entity.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EmbeddedId;
@@ -22,7 +22,7 @@ import java.io.Serializable;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
-@Table(name = "Likes")
+@Table(name = "likes")
 public class Like {
 
     @EmbeddedId

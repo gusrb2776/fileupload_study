@@ -1,4 +1,4 @@
-package com.study.fileupload_study.sound.enitity;
+package com.study.fileupload_study.workspace.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
